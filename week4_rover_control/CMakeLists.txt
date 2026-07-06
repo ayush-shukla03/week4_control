@@ -30,11 +30,6 @@ install(PROGRAMS
   RENAME controller
 )
 
-install(PROGRAMS
-  scripts/solution.py
-  DESTINATION lib/${PROJECT_NAME}
-  RENAME solution
-)
 
 install(DIRECTORY
   launch

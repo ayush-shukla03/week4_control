@@ -64,4 +64,25 @@ Wheel Radius: 0.12 m
 Steering Joint Limits: -1.57 rad to +1.57 rad (±90 degrees).
 
 ## Submission
-You are supposed to push the completed package **week4_rover_control** to the src folder of your existing Github repo from the previous weeks. Also submit a video showcasing the rover movement being controlled using keyboard in Gazebo. 
+You are supposed to push the completed package **week4_rover_control** to the src folder of your existing Github repo from the previous weeks.
+
+**Terminal 1: Launch Gazebo and spawn your rover**
+```bash
+cd ~/<your_workspace>/
+colcon build
+source install/setup.bash
+ros2 launch week4_rover_control sim.launch.py
+```
+
+**Terminal 2: Run your controller node**
+```bash
+source install/setup.bash
+ros2 run week4_rover_control controller
+```
+
+**Terminal 3: Run keyboard teleop node**
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+
+Also submit a video showcasing all these terminals and rover movement in Gazebo. You have to push the code the to the existing Github repo that you have been working in. You have to push two packages in the src folder - rover_description and week4_rover_control(completed). 
